@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalabe=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.css">
+    <title>Bienvenido</title>
+    <style>
+        body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }        
+        
+        .row{
+            margin-bottom: 0;
+        }
+        .title{
+            text-align: center;
+            background: #870d4c;
+            color: white;
+        }
+
+        .sidebar{
+            text-align: center;
+            background-color: #494949;
+            color: white;
+        }
+        .sidebar ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        .sidebar a{
+            margin: .1rem;  
+        }
+        .main-content h3{
+            text-align: center;
+        }
+        
+        .foot{
+            background-color: #550024;
+            color:white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class = "row title">
+            <div class = "col s12">
+                <h2>Instituto Tecnologico de Saltillo</h2>
+            </div>
+        </div>
+        
+        
+            <div class = "row main">
+                <div class ="col s12 sidebar">
+                    <div class= "section">
+                        <h3>Contenido</h3>
+                        <div class= "divider"></div>
+                        <ul>
+                            <a class="waves-effect waves-light btn" href = "http://its.mx/"><i class="material-icons left">school</i>Instituto</a>
+                            <a class="waves-effect waves-light btn" href = "unidad1.html" ><i class="material-icons left">looks_one</i>Unidad 1</a>
+                            <a class="waves-effect waves-light btn" hrer = "unidad2.html"><i class="material-icons left">looks_two</i>Unidad 2</a>
+                            <a class="waves-effect waves-light btn" href = "unidad3.html"><i class="material-icons left">looks_3</i>Unidad 3</a>
+                            <a class="waves-effect waves-light btn" href = "unidad4.html"><i class="material-icons left">looks_4</i>Unidad 4</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "container">
+                <div class = "row">
+                    <div class = "col m6 s12 offset-m3 ">    
+                        <div class = "card hoverable">
+                            <div class = "card-image">
+                                <img class=""src="img/index.webp" alt="motherboard">
+                            </div>
+                            <div class ="card-content">
+                                <p>
+                                    La arquitectura de computadoras es el diseño conceptual y la estructura operacional
+                                    fundamental de un sistema de computadoras. Es decir, es un modelo y una descripción 
+                                    funcional de los requerimientos y las implementaciones de diseño para varias partes 
+                                    de una computadora, con especial interés en la forma en que la unidad central de 
+                                    proceso (CPU) trabaja internamente y accede a las direcciones de memoria. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+    
+    
+    <div class = "page-footer foot">
+        <div class ="container">
+            <div class = "row">
+                <div class = "col s12">
+                    <h4>Diseño: Cinthia Yulisa Gallegos Carranza</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="js/materialize.js"></script>
+</body>
+</html>

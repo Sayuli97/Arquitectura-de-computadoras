@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitectura de Computadoras</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalabe=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.css">
+    <title>Bienvenido</title>
+    <style>
+        body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        }
+
+        main {
+        flex: 1 0 auto;
+        }        
+        
+        .row{
+            margin-bottom: 0;
+        }
+        .title{
+            text-align: center;
+            background: #870d4c;
+            color: white;
+        }
+
+        .sidebar{
+            text-align: center;
+            background-color: #494949;
+            color: white;
+        }
+        .sidebar ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        .sidebar a{
+            margin: .1rem;  
+        }
+        .main-content h3{
+            text-align: center;
+        }
+        
+        .foot{
+            background-color: #550024;
+            color:white;
+            text-align: center;
+        }
+        .contenido h3{
+            text-align: center;
+        }
+        .contenido p{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <main> 
+        <div class = "row title">
+            <div class = "col s12">
+                <h2>Instituto Tecnologico de Saltillo</h2>
+            </div>
+        </div>
+        <div class = "row main">
+            <div class ="col s12 sidebar">
+                <div class= "section">
+                    <h3>Contenido</h3>
+                    <div class= "divider"></div>
+                    <ul>
+                        <a class="waves-effect waves-light btn" href = "http://its.mx/"><i class="material-icons left">school</i>Instituto</a>
+                            <a class="waves-effect waves-light btn" href = "unidad1.html" ><i class="material-icons left">looks_one</i>Unidad 1</a>
+                            <a class="waves-effect waves-light btn" href = "unidad2.html"><i class="material-icons left">looks_two</i>Unidad 2</a>
+                            <a class="waves-effect waves-light btn" href = "unidad3.html"><i class="material-icons left">looks_3</i>Unidad 3</a>
+                            <a class="waves-effect waves-light btn" href = "unidad4.html"><i class="material-icons left">looks_4</i>Unidad 4</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class = "container">
+                
+          <div class = "row">
+                    <div class = "col s12">    
+                            <h3>Unidad 4 - Procesamiento Paralelo.</h3> 
+                            <div class ="divider"></div>
+                    </div>   
+                </div>
+                
+                <div class = "row">
+                    <div class = "col s12">    
+                            <h5><b>4.1 Estructura</b></h5> 
+                            <div class ="divider"></div>
+                    </div>   
+                </div> 
+
+                 <div class = "row contenido">
+                    <div class = "col s12">
+                        <div class = "divider"></div>
+                          <p>La computación paralela es una forma de cómputo en la que muchas instrucciones se ejecutan simultáneamente, operando sobre el 
+                             principio de que problemas grandes, a menudo se pueden dividir en unos más pequeños, que luego son resueltos simultáneamente(en paralelo).
+                             Hay varias formas diferentes de computación paralela: paralelismo a nivel de bit, paralelismo a nivel de instrucción, paralelismo 
+                             de datos y paralelismo de tareas. El paralelismo se ha empleado durante muchos años, sobre todo en la computación de altas prestaciones, 
+                             pero el interés en ella ha crecido últimamente debido a las limitaciones físicas que impiden el aumento de la frecuencia.
+                          <br>Las computadoras paralelas pueden clasificarse según el nivel de paralelismo que admite su hardware: equipos con procesadores multinúcleo 
+                             y multi-procesador que tienen múltiples elementos de procesamiento dentro de una sola máquina y los clústeres, MPPS y grids que utilizan
+                             varios equipos para trabajar en la misma tarea. Muchas veces, para acelerar la tareas específicas, se utilizan arquitecturas especializadas
+                             de computación en paralelo junto a procesadores tradicionales</p>
+                       </div>   
+                </div> 
+                
+                 <div class = "row">
+                    <div class = "col s12 center-align">
+                        <img class = "responsive-img "src="img/procesamiento-en-paralelo.png" alt="Procesamiento Paralelo">
+                    </div>
+                </div>
+ 
+                 
+                <div class = "row contenido">
+                    <div class = "col s12">
+                      <h5><b>4.2. Tipos de Computación Paralela </b></h5> 
+                        <div class = "divider"></div>
+                           <h6><b>Paralelismo a nivel de bit</b></h6>
+                               <p>en la década de 1970 hasta alrededor de 1986, la aceleración en la arquitectura de computadores se lograba en gran medida duplicando 
+                                  el tamaño de la palabra en la computadora, la cantidad de información que el procesador puede manejar por ciclo. El aumento del 
+                                  tamaño de la palabra reduce el número de instrucciones que el procesador debe ejecutar para realizar una operación en variables 
+                                  cuyos tamaños son mayores que la longitud de la palabra. Por ejemplo, cuando un procesador de 8 bits debe sumar dos enteros de 16 
+                                  bits, el procesador primero debe adicionar los 8 bits de orden inferior de cada número entero con la instrucción de adición, a 
+                                  continuación, añadir los 8 bits de orden superior utilizando la instrucción de adición con acarreo que tiene en cuenta el bit de 
+                                  acarreo de la adición de orden inferior, en este caso un procesador de 8 bits requiere dos instrucciones para completar una sola 
+                                  operación, en donde un procesador de 16 bits necesita una sola instrucción para poder completarla. </p> <br>
+
+	                  <h6><b>Paralelismo a nivel de instrucción </b></h6>
+	                       <p>Un programa de ordenador es, en esencia, una secuencia de instrucciones ejecutadas por un procesador. Estas instrucciones pueden 
+                                  reordenarse y combinarse en grupos que luego son ejecutadas en paralelo sin cambiar el resultado del programa. Esto se conoce como 
+                                  paralelismo a nivel de instrucción.<br>
+	                          Los procesadores modernos tienen ”pipeline” de instrucciones de varias etapas. Cada etapa en el pipeline corresponde a una acción 
+                                  diferente que el procesador realiza en la instrucción correspondiente a la etapa; un procesador con un pipeline de N etapas puede 
+                                  tener hasta n instrucciones diferentes en diferentes etapas de finalización.</p><br>
+
+			  <h6><b>Paralelismo de datos </b></h6>
+	                       <p>El paralelismo de datos es el paralelismo inherente en programas con ciclos, que se centra en la distribución de los datos entre 
+                                  los diferentes nodos computacionales que deben tratarse en paralelo. La paralelización de ciclos conduce a menudo a secuencias 
+                                  similares de operaciones (no necesariamente idénticas) o funciones que se realizan en los elementos de una gran estructura de datos.
+                                  Muchas de las aplicaciones científicas y de ingeniería muestran paralelismo de datos.
+		               <br>Durante muchos años, la computación paralela se ha aplicado en la computación de altas prestaciones, pero el interés en ella ha aumentado 
+                                   en los últimos años debido a las restricciones físicas que impiden el escalado en frecuencia.
+			       <br>La computación paralela se ha convertido en el paradigma dominante en la arquitectura de computadores, principalmente en los
+                                   procesadores multinúcleo.</p><br>
+			
+			<h6><b>Paralelismo de tareas</b></h6>
+			<p>El paralelismo de tareas es la característica de un programa paralelo en la que cálculos completamente diferentes se pueden realizar en 
+                           cualquier conjunto igual o diferente de datos. Esto contrasta con el paralelismo de datos, donde se realiza el mismo cálculo en distintos 
+                           o mismos grupos de datos. El paralelismo de tareas por lo general no escala con el tamaño de un problema.			
+                         <br>Una dependencia de terminación de ciclo es la dependencia de una iteración de un ciclo en la salida de una o más iteraciones anteriores. 
+                             Las dependencias de terminación de ciclo evitan la paralelización de ciclos.</p>
+                       </div>   
+                </div> 
+                
+                <div class = "row contenido">
+                    <div class = "col s12">
+                      <h5><b>4.3. Evaluación de Multiprocesadores </b></h5> 
+                        <div class = "divider"></div>
+                           <p><b>Carga (load):</b> conjunto de tareas que ha de hacer un sistema
+                                <br>Programas, datos y órdenes de los usuarios<br>
+
+                                <br><b>Carga de prueba (workload)</b>
+                                <br>Carga empleada en un estudio de evaluación<br>
+
+                                <br><b>Variables que reflejan la carga</b> 
+                                <br>Número de programas simultáneos en ejecución
+                                <br>Accesos por unidad de tiempo a un servidor de páginas web
+                                <br>Peticiones por unidad de tiempo a una base de datos
+                                <br>Para comprender mejor esto, supongamos  que un procesador simple tiene un ciclo de instrucción sencillo consistente solamente 
+                                    en una etapa de búsqueda del código de instrucción y en otra etapa de ejecución de la instrucción. En un procesador sin 
+                                    segmentación del cauce, las dos etapas se realizarían de manera secuencial para cada una de las instrucciones.</p>
+ 
+                           <h6><b> Medidas de rendimiento </b></h6>
+                               <p><b>Tiempo de respuesta (response time)</b>
+                                  <br>• Tiempo total desde el principio hasta el final de la actividad
+                                  <br>• Tiempo de ejecución de un programa (s)
+                                  <br>• Tiempo de acceso a un disco (ms)<br>
+
+                                  <br><b>Productividad (throughput)</b>
+                                  <br>• Cantidad de trabajo hecho por unidad de tiempo
+                                  <br>• Programas ejecutados por hora
+                                  <br>• Páginas por hora servidas por un servidor web
+                                  <br>• Correos por segundo procesados por un servidor de correo
+                                  <br>• Peticiones por minuto procesados por un servidor de comercio electrónico. </p>
+                       </div>   
+                </div> 
+    </main>
+    
+    <div class = "page-footer foot">
+        <div class ="container">
+            <div class = "row valign-wrapper">
+                <div class = "col s11">
+                    <h4>Diseño: Cinthia Yulisa Gallegos Carranza</h4>
+                </div>
+                <div class = "col s1">
+                    <a class = "btn waves-effect waves-light hoverable" href="index.html"><i class ="small material-icons">arrow_back</i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+<script src="js/materialize.js"></script>
+</body>
+
+</html>

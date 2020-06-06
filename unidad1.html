@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitectura de Computadoras</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalabe=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.css">
+    <title>Bienvenido</title>
+    <style>
+        body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }        
+        
+        .row{
+            margin-bottom: 0;
+        }
+        .title{
+            text-align: center;
+            background: #870d4c;
+            color: white;
+        }
+
+        .sidebar{
+            text-align: center;
+            background-color: #494949;
+            color: white;
+        }
+        .sidebar ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        .sidebar a{
+            margin: .1rem;  
+        }
+        .main-content h3{
+            text-align: center;
+        }
+        
+        .foot{
+            background-color: #550024;
+            color:white;
+            text-align: center;
+        }
+        .contenido h3{
+            text-align: center;
+        }
+        .contenido p{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class = "row title">
+            <div class = "col s12">
+                <h2>Instituto Tecnologico de Saltillo</h2>
+            </div>
+        </div>
+        
+        
+            <div class = "row main">
+                <div class ="col s12 sidebar">
+                    <div class= "section">
+                        <h3>Arquitectura de Computadoras</h3>
+                        <div class= "divider"></div>
+                        <ul>
+                            <a class="waves-effect waves-light btn" href = "http://its.mx/"><i class="material-icons left">school</i>Instituto</a>
+                            <a class="waves-effect waves-light btn" href = "unidad1.html" ><i class="material-icons left">looks_one</i>Unidad 1</a>
+                            <a class="waves-effect waves-light btn" href = "unidad2.html"><i class="material-icons left">looks_two</i>Unidad 2</a>
+                            <a class="waves-effect waves-light btn" href = "unidad3.html"><i class="material-icons left">looks_3</i>Unidad 3</a>
+                            <a class="waves-effect waves-light btn" href = "unidad4.html"><i class="material-icons left">looks_4</i>Unidad 4</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "container">
+                
+                <div class = "row">
+                    <div class = "col s12">    
+                            <h3>Unidad 1 - Arquitecturas de Cómputo</h3> 
+                            <div class ="divider"></div>
+                    </div>   
+                </div>
+                
+                <div class = "row">
+                    <div class = "col s12">    
+                            <h5><b>1.1 Modelos de arquitecturas de cómputo</b></h5> 
+                            <div class ="divider"></div>
+                    </div>   
+                </div>
+
+                <div class = "row">
+                    <div class = "col s12">    
+                            <h5>1.1.1 Clasicas</h5> 
+                            <div class ="divider"></div>
+                    </div>   
+                </div>
+
+                <div class = "row contenido">
+                    <div class = "col s12 m6">
+                        <div class = "section">
+                            <h5>Arquitectura Mauchly-Eckert (Von Newman)</h5>
+                            <div class = "divider"></div>
+                            <p>Esta arquitectura fue utilizada en la computadora ENIAC. Consiste en una unidad central de proceso que se comunica 
+                               a través de un solo bus con un banco de memoria en donde se almacenan tanto los códigos de instrucción del programa, 
+                               como los datos que serán procesados por este. Esta arquitectura es la más empleada en la actualidad ya, que es muy versátil. 
+                               Ejemplo de esta versatilidad es el funcionamiento de los compiladores, los cuales son programas que toman como entrada un 
+                               archivo de texto conteniendo código fuente y generan como datos de salida, el código máquina que corresponde a dicho código 
+                               fuente (Son programas que crean o modifican otros programas).
+                               La principal desventaja de esta arquitectura es que el bus de datos y direcciones único se convierte en un cuello de botella por 
+                               el cual debe pasar toda la información que se lee de o se escribe a la memoria, obligando a que todos los accesos a esta sean 
+                               secuenciales. Esto limita el grado de paralelismo (acciones que se pueden realizar al mismo tiempo) y por lo tanto, el desempeño
+                               de la computadora. Este efecto se conoce como el cuello de botella de Von Newman. </p>
+
+                        </div>
+                    </div>
+                    <div class = "col s12 m6">
+                        <div class = "section">
+                            <h5>Arquitectura Harvard</h5>
+                            <div class = "divider"></div>
+                            <p>Esta arquitectura surgió en la universidad del mismo nombre, poco después de que la arquitectura Von Newman apareciera 
+                               en la universidad de Princeton. Al igual que en la arquitectura Von Newman, el programa se almacena como un código numérico 
+                               en la memoria, pero no en el mismo espacio de memoria ni en el mismo formato que los datos. Por ejemplo, se pueden almacenar 
+                               las instrucciones en doce bits en la memoria de programa, mientras los datos de almacenan en ocho bits en una memoria aparte.
+                               El hecho de tener un bus separado para el programa y otro para los datos permite que se lea el código de operación de una instrucción,
+                               al mismo tiempo se lee de la memoria de datos los operados de la instrucción previa. Así se evita el problema del cuello de botella 
+                               de Von Newman y se obtiene un mejor desempeño.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class = "row">
+                    <div class = "col s12">
+                     <div class = "section">
+                        <table>
+                         <tbody>
+                            <tr>
+                              <td>
+                                <img class = "responsive-img"src="img/arquitectura-von.jpg" width="450" height="350"> 
+                              </td>
+                              <td>
+                                <img class = "responsive-img"src="img/arquitectura-harvard.jpg" width="500" height=350">
+                              </td>
+                            </tr>
+                        </tbody>
+                    </table>    
+                </div>
+              </div>     
+             
+                             
+                
+                <div class = "row contenido">
+                    <div class = "col s12">    
+                        <div class = "section">
+                                <h5>1.1.2 Segmentadas</h5>
+                                <p>Las arquitecturas segmentadas o con segmentación del cauce buscan mejorar el desempeño realizando paralelamente varias etapas 
+                                   del ciclo de instrucción al mismo tiempo. El procesador se divide en varias unidades funcionales independientes y se dividen 
+                                   entre ellas el procesamiento de las instrucciones.
+                                   Para comprender mejor esto, supongamos que un procesador simple tiene un ciclo de instrucción sencillo consistente solamente 
+                                   en una etapa de búsqueda del código de instrucción y en otra etapa de ejecución de la instrucción. En un procesador sin 
+                                   segmentación del cauce, las dos etapas se realizarían de manera secuencial para cada una de las instrucciones.</p>
+                                <div class = "divider"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class = "row contenido">
+                    <div class = "col s12">    
+                        <div class = "section">
+                                <h5>1.1.3 Multiprocesamiento</h5>
+                                <p>Cuando se desea incrementar el desempeño más aya de lo que permite la técnica de segmentación del cauce (limite teórico de una 
+                                   instrucción por ciclo de reloj), se requiere utilizar más de un procesador para la ejecución del programa de aplicación.</p>
+                                   Las CPU de multiprocesamiento:
+                                   SISO – (Single Instruction, Single Operand ) computadoras independientes <br>
+                                   SIMO – (Single Instruction, Multiple Operand ) procesadores vectoriales  <br>
+                                   MISO – (Multiple Instruction, Single Operand ) No implementado           <br>
+                                   MIMO – (Multiple Instruction, Multiple Operand ) sistemas SMP, Clusters  <br>
+
+                                <div class = "divider"></div>
+                        </div>
+                    </div>
+                </div>
+             
+                <div class = "row">
+                    <div class = "col s12">    
+                            <h5><b>1.2 Análisis de Componentes</b></h5> 
+                            <div class ="divider"></div>
+                    </div>   
+                </div>
+
+                <div class = "row contenido">
+                    <div class="section">
+                        <div class = "col s12">
+                            <h5>1.2.1 CPU</h5>
+                            <div class = "divider"></div>
+                            <p>
+                               CPU es una abreviación de Unidad Central de Procesamiento. El CPU es un componente básico de la computadora 
+                               personal u ordenador que procesa datos y realiza cálculos matemáticos-informáticos.
+                               El CPU proporciona la capacidad de programación, y junto con la memoria y los dispositivos de entrada/salida, 
+                               es de los componentes computacionales que encontramos presente en toda la historia de las computadoras.<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "row">
+                    <div class = "col s12 center-align">
+                        <img class = "responsive-img "src="img/cpu.jpg" width="550" height="400">
+                    </div>
+                </div>
+
+                <div class = "row contenido">
+                    <div class="section">
+                        <h6><b>Arquitecturas</h6></b>
+                        <div class = "divider"></div>
+                        <p>Tanto la miniaturización como la estandarización de los CPU han aumentado la presencia de estos dispositivos digitales 
+                           en la vida moderna mucho más allá de las aplicaciones limitadas de máquinas de computación dedicadas. Los microprocesadores
+                           modernos aparecen en todo, desde automóviles, televisores, neveras, calculadoras, aviones, hasta teléfonos móviles o celulares, 
+                           juguetes, entre otros. </p>
+                    </div>
+                </div>
+
+                <div class = "row contenido">
+                    <div class="section">
+                        <h6><b>Tipos</h6></b>
+                        <div class = "divider"></div>
+                        <p><h6>Computadoras de un sólo núcleo</h6><br>
+                           La CPU de un sólo núcleo es el tipo más antiguo disponible y en un principio éste fue el único que podía ser utilizado en las computadoras. 
+                           Éstas sólo podían iniciar una operación a la vez, así que no eran muy buenas a la hora de hacer muchas tareas. Esto significó, en su momento,
+                           una disminución notable en el rendimiento de las aplicaciones que se ejecutaban. Aunque sólo una operación podría ser iniciada en un momento,
+                           otra podía ser activada antes de que la primera se terminara, pero con cada nueva operación el equipo era más lento. El rendimiento en este 
+                           tipo de CPU fue en gran parte dependiente de sus velocidades de reloj, que era una medida de su poder. <br>
+                           <br>
+                           <h6>CPU de dos núcleos</h6><br>
+                           Una CPU de doble núcleo es una sola, pero funciona como dos en una. A diferencia de las de núcleo único en el que el procesador tenía que
+                           alternarse entre diferentes conjuntos de flujos de datos, si más de una operación estaba en marcha, las de doble núcleo podían manejar 
+                           múltiples tareas de manera más eficiente. Para sacar el máximo provecho de éstas, tanto el sistema operativo como los programas que se 
+                           ejecutaban en él, debían tener un código especial llamado SMT (Tecnología Multihilo Simultáneo). Las CPU de doble núcleo son más rápidas 
+                           que las de uno sólo, pero no tanto como las de cuatro que las han sustituido.</p>
+                    </div>
+                </div>
+
+                <div class = "row contenido">
+                    <div class = "col s12">
+                        <div class="section">
+                            <h5>Características</h5>
+                            <div class ="divider"></div>
+                            <p><h6>Frecuencia de reloj: </h6>
+                               Este primer término hace referencia a la velocidad de reloj que hay dentro del propio procesador. 
+                               Es un valor que se mide en Mhz o Ghz y es básicamente la cantidad de potencia que alberga la CPU. La mayoría de ellas cuentan 
+                               con una frecuencia base (para tareas básicas) y otra turbo que se utiliza para procesos más exigentes (para gaming por ejemplo).<br>
+                            <h6>Consumo energético:</h6> 
+                               Es normal que nos encontremos con CPU’s donde su consumo energético varíe notablemente. Es un valor que 
+                               se muestra en vatios (W) y como es obvio, aquellos procesadores de gama superior serán más propensos a consumir más energía. Ante esto, 
+                               es importante también contar con una fuente de alimentación acorde a la potencia de nuestro procesador y tarjeta gráfica.<br>
+                            <h6>Número de núcleos:</h6> 
+                               Con el avance de la tecnología, ya es posible encontrar tanto procesadores de Intel como de AMD que cuentan desde 2 hasta 16 núcleos 
+                               respectivamente. Estos cores son los encargados de llevar a cabo multitud de tareas de manera simultánea sin que el PC tenga que
+                               trabajar a “marchas forzadas”. Aquí depende también mucho del uso que le vayáis a dar a vuestro ordenador. Si lo vais a usar únicamente 
+                               para tareas de ofimática, con una CPU de uno o dos núcleos será más que suficiente. Aunque si ya queréis hacer streaming, jugar o 
+                               llevar a cabo labores de edición de vídeos, necesitaréis al menos cuatro.<br>
+                            <h6>Zócalo: </h6> Es el tipo de conector con pines o socket al que debéis conectar a vuestra placa base. Es muy importante que nos fijemos
+                                en este término, ya que de lo contrario, pueden comprar sin querer una CPU que sea incompatible con nuestra motherboard. Por ejemplo, 
+                                las últimas de Intel suelen ser tener el socket 1151, mientras que las de AMD con Ryzen son AM4.<br>
+                            <h6>Número de hilos:</h6> Dentro de cada núcleo puede existir un hilo o core virtual, que tienen como objetivo llevar a cabo otros
+                                procesos más pesados sin que el rendimiento del PC o del portátil se vea afectado. Esta tecnología es lo que se conoce como
+                                “hyper-threading”, un término que acuñó Intel, pero que a día de hoy se usa indistintamente para cualquier marca.<br>
+                            <h6>Memoria caché:</h6> A la hora de “recordar” cualquier tarea, el propio ordenador hace uso de la memoria RAM. Sin embargo, 
+                                a veces esto no es del todo suficiente y por tanto es necesario que utilice la memoria caché de la propia CPU. Se caracteriza 
+                                porque se llega a ella de forma más rápida y puede ser tipo L1, L2 y L3</p>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "row contenido">
+                    <div class = "col s12">
+                        <h5>Funcionamiento</h5>
+                        <div class = "divider"></div>
+                        <p> <h6>ALU</h6> La unidad aritmético lógica, también conocida como ALU (siglas en inglés de arithmetic logic unit), es un circuito digial 
+                                         que calcula operaciones aritméticas (como suma, resta, multiplicación, etc.) y operaciones lógicas (si, y, o, no), entre 
+                                         dos números. <br>
+                                         Muchos tipos de circuitos electrónicos necesitan realizar algún tipo de operación aritmética, así que incluso el circuito 
+                                         dentro de un reloj digital tendrá una ALU minúscula que se mantiene sumando 1 al tiempo actual, y se mantiene comprobando 
+                                         si debe activar el sonido de la alarma.<br>
+                             <h6> Unidad de Control </h6> La unidad de control es uno de los tres bloques funcionales principales en los que se divide una unidad 
+                                  central de procesamiento (CPU). Los otros dos bloques son la unidad de procesos y el bus de entrada/salida.Su función es buscar 
+                                  las instrucciones en la memoria principal, decodificarlas (interpretación) y ejecutarlas, empleando para ello la unidad de proceso.<br>
+                                  Existen 2 tipos de unidades de control, las cableadas, usadas generalmente en máquinas sencillas, y las micro-programadas, propias de 
+                                  máquinas más complejas. En el primer caso, los componentes principales son el circuito de lógica secuencial, el de control de estado,
+                                  el de lógica y el de emisión de reconocimiento de señales de control. En el segundo caso, la micro-programación de la unidad de control
+                                  se encuentra almacenada en una micro-memoria, a la cual se accede de manera secuencial para posteriormente ir ejecutando cada una de 
+                                  las micro-instrucciones. <br>
+                             <h6> Registros </h6> Dentro de un microprocesador existe un componente llamado registro de información, que almacena temporalmente los valores 
+                                  de los datos a los que se accede con frecuencia durante el proceso. Los registros, de importancia primordial dentro de la jerarquía 
+                                  de memoria de la computadora, se utilizan para almacenar sólo los valores de los datos, comandos, estados binarios y otras 
+                                  instrucciones que definen qué datos se procesan y cómo. <br>
+                            <h6> Buses Internos </h6> En informática, a un bus se le denomina todo un conjunto de cables que se conectan entre los componentes de un
+                                 computador con el fin de comunicar datos direcciones y comandos entre ellos. Existen dos tipos de buses, en paralelo y en serie.<br>
+
+                    </div>
+                </div>
+ 
+                <div class = "row contenido">
+                    <div class = "col s12">
+                        <h5><b>1.2.2 Memorias</b></h5>
+                        <div class = "divider"></div>
+                        <p> <h6>Manejo de Memoria</h6> La memoria de acceso aleatorio (Random Access Memory, RAM), se utiliza como memoria de trabajo de
+                                  computadoras para el sistema operativo, los programas y la mayor parte del software.<br>
+                             <h6>Memoria Principal</h6> Es la memoria de la computadora donde se almacenan temporalmente los datos como los programas que 
+                                 la unidad central de procesamiento (CPU) esta procesando o va a procesar en un determinado momento.<br>
+                             <h6> Memoria Caché </h6>Es una memoria especial de alta velocidad, diseñada para acelerar el procesamiento de instrucciones del
+                                 microprocesador, el cual, puede acceder a los datos almacenados en caché mucho más rápidamente que a aquellos datos almacenados
+                                 en la memoria. <br>
+                    </div>
+                </div>
+
+                 <div class = "row">
+                    <div class = "col s12 center-align">
+                        <img class = "responsive-img "src="img/memorias.jpg" width="550" height="400">
+                    </div>
+                </div>
+
+                 <div class = "row contenido">
+                    <div class = "col s12">
+                        <h5><b>1.2.3 Dispositivo I/O</b></h5>
+                        <div class = "divider"></div>
+                        <p><h6><b>Modulos I/O</h6></b> En primer termino hablaremos de los dispositivos de entrada, que como su nombre lo indica, sirven para introducir 
+                                                 datos (información) a la computadora para su proceso. Los datos se leen de los dispositivos de entrada y se almacenan 
+                                                 en la memoria central o interna. <br>
+                                                 Los dispositivos de entrada convierten la información en señales eléctricas que se almacenan en la memoria central.
+                                                 Los dispositivos de entrada típicos son los teclados, otros son: lápices ópticos, palancas de mando (joystick),
+                                                 CD-ROM, discos compactos (CD), etc. Hoy en día es muy frecuente que el usuario utilice un dispositivo de entrada 
+                                                 llamado ratón que mueve un puntero electrónico sobre una pantalla que facilita la interacción usuario-máquina.<br>
+                             <h6><b>I/O Programado</h6></b>Los dispositivos de Entrada y Salida permiten la comunicación entre la computadora y el usuario.<br>
+                             <h6><b>I/O Mediante interrupciones</h6></b>El problema con E/S programada es que el CPU tiene que esperar un tiempo considerable a que 
+							                     el módulo de E/S en cuestión esté preparado para recibir o transmitir los datos. El CPU debe estar comprobando continuamente el 
+							                     estado del módulo de E/S. Se degrada el desempeño del sistema.<br>
+                                                 Una alternativa es que el CPU tras enviar una orden de E/S continue realizando algún trabajo útil. El módulo 
+												 de E/S interrumpirá al CPU para solicitar su servicio cuando esté preparado para intercambiar datos. El CPU 
+												 ejecuta la transferencia de datos y después continúa con el procesamiento previo.<br>
+                                                Se pueden distinguir dos tipos: E/S síncrona y E/S asíncrona
+                                             <h6><b>E/S Síncrona:</b></h6> cuando la operación de E/S finaliza, el control es retornado al
+                                                 proceso que la generó. La espera por E/S se lleva a cabo por medio de una
+                                                 instrucción wait que coloca al CPU en un estado ocioso hasta que ocurre otra
+                                                 interrupción. Aquellas máquinas que no tienen esta instrucción utilizan un loop.
+                                                 Este loop continua hasta que ocurre una insterrupción transfiriendo el control a
+                                                 otra parte del sistema de operación. Sólo se atiende una solicitud de E/S por vez.
+                                                 El sistema de operación conoce exactamente que dispositivo está interrumpiendo.
+                                                 Esta alternativa excluye procesamiento simultáneo de E/S.
+                                             <h6><b>E/S Asíncrona:</b></h6> retorna al programa usuario sin esperar que la operación de E/S
+                                                 finalice. Se necesita una llamada al sistema que le permita al usuario esperar por
+                                                 la finalización de E/S (si es requerido). También es necesario llevar un control de
+                                                 las distintas solicitudes de E/S. Para ello el sistema de operación utiliza una tabla
+                                                 que contiene una entrada por cada dispositivo de E/S (Tabla de Estado de Dispositivos).
+                                                 La ventaja de este tipo de E/S es el incremento de la eficiencia del sistema.
+                                                 Mientras se lleva a cabo E/S, el CPU puede ser usado para procesar o para 
+                                                 planificar otras E/S. Como la E/S puede ser bastante lenta comparada con la
+                                                 velocidad del CPU, el sistema hace un mejor uso de las facilidades. <br>
+                             <h6><b>Acceso directo a memoria</h6></b>El acceso directo a memoria (DMA, del inglés direct memory access) permite a cierto tipo de
+                                                 componentes de una computadora acceder a la memoria del sistema para leer o escribir
+                                                 independientemente de la unidad central de procesamiento (CPU) principal. Muchos
+                                                 sistemas hardware utilizan DMA, incluyendo controladores de unidades de disco, tarjetas
+                                                 gráficas y tarjetas de sonido. DMA es una característica esencial en todos los ordenadores
+                                                 modernos, ya que permite a dispositivos de diferentes velocidades comunicarse sin someter a la
+                                                 CPU a una carga masiva de interrupciones.<br>
+                             <h6><b>Canales y procesamiento I/O</h6></b>En las entradas y salidas que se ejecutan desde el procesador entran tres conceptos que se 
+							      deben conocer. <br>
+								  <h6> DMA </h6>En las entradas y salidas que se ejecutan desde el procesador entran tres conceptos que se 
+							      deben conocer. <br>
+								  <h6> Canales </h6>El canal de E/S es una extensión del concepto de DMA. Un canal de E/S tiene la 
+								  capacidad de ejecutar instrucciones de E/S, lo que da un control total sobre las operaciones de E/S.<br>
+								  Las instrucciones de E/S se almacenan en la memoria principal y serán ejecutadas por un procesador de propósito 
+								  específico en el mismo canal de E/S.<br>
+                    </div>        
+                </div>
+
+                <div class = "row contenido">
+                    <div class = "col s12">
+                        <div class = "section">
+                            <h5><b>1.2.4 BUSES</b></h5>
+                            <div class = "divider"></div>
+                            <p> Consta de un camino que permite comunicar selectivamente un cierto número de componentes o dispositivos, de acuerdo a unas 
+                                ciertas reglas o normas de conexión. <br>
+
+                                <h6><b>Tipos </b></h6>
+                                       • SERIE y PARALELO: los primeros transmiten bit a bit y los segundos varios bits a la vez.
+                                       • MULTIPLEXADOS y NO MULTIPLEXADOS o DEDICADOS: los multiplexados realizan diferentes funciones en función de las necesidades 
+                                         del momento.
+                                       • Ejemplo: bus compartido para direcciones y datos ahorro en Hardware y por lo tanto en costos. Tipos de Buses
+                                       • CENTRALIZADOS y DISTRIBUIDOS: necesidad de determinar qué elemento transmite y cuál recibe. Generalmente existe administración
+                                         centralizada por la CPU o procesador.
+                                       • SÍNCRONOS y ASÍNCRONOS (temporización): cómo ocurren los diferentes eventos (comienzo, fin,...) implicados en la transmisión
+                                         de información. Utilización de una señal de reloj (comunicación síncrona) o unas líneas de protocolo (comunicación asíncrona).<br>
+
+                                <h6><b>Estructura </b></h6>
+                                        Los buses se componen de líneas eléctricas que transmiten un “0” (cero voltios) o un “1” (más de cero voltios).
+                                        Líneas/bus de datos: camino para transferir datos entre el resto de componentes de un computador.
+                                        Su anchura (número de líneas eléctricas) suele ser una potencia de dos (8=23, 16=24, 32=25, 64=26,...).Estructura de los Buses
+                                        Líneas/bus de direcciones: designan la posición/dirección de los datos. Son salidas de la CPU/procesador y determinan capacidad de direccionamiento.
+                                        Líneas/bus de control: controlan el acceso y uso de las líneas/buses anteriores.
+
+                                 <h6><b>Jerarquías </b></h6>
+                                         Compatibilidad entre buses: <br>
+                                         • Sólo si son eléctricamente idénticos. Las características de los diferentes tipos de buses deben estar normalizadas. 
+                                           Ejemplo: bus PCI, AGP, USB, FireWire...Jerarquías de Buses
+                                         • Antiguamente sólo existía un bus principal que lo conectaba todo: bus del sistema.
+                                         • Actualmente existe un conjunto de buses conectados entre sí y formando una jerarquía.
+                                         • Facilita la mejora del rendimiento de todo el computador al agrupar dentro de los diferentes tipos de buses aquellos
+                                           componentes del ordenador que tienen aproximadamente la misma velocidad de transmisión de la información.
+                                         • Mientras más lejos del CPU, buses más lentos y normalmente de menos líneas de datos. Jerarquías de Buses
+
+                                 <h6><b>Interrupciones </b></h6>
+                                        En el contexto de la informática, una interrupción (del inglés Interrupt Request, también conocida como petición de 
+                                        interrupción) es una señal recibida por el procesador de un ordenador, indicando que debe "interrumpir" el curso de ejecución 
+                                        actual y pasar a ejecutar código específico para tratar esta situación.
+                                        Una interrupción es una suspensión temporal de la ejecución de un proceso, para pasar a ejecutar una subrutina de servicio 
+                                        de interrupción, la cual, por lo general, no forma parte del programa, sino que pertenece al sistema operativo o al BIOS).
+                                       Una vez finalizada dicha subrutina, se reanuda la ejecución del programa.<br>
+                                  </div>
+                               </div>
+                           </div>
+
+                  <div class = "row">
+                    <div class = "col s12 center-align">
+                        <img class = "responsive-img "src="img/buses.png" width="550" height="400">
+                    </div>
+                </div>
+                       </div>
+                  </main>
+    
+    
+    <div class = "page-footer foot">
+        <div class ="container">
+            <div class = "row valign-wrapper">
+                <div class = "col s11">
+                    <h4>Diseño: Cinthia Yulisa Gallegos Carranza</h4>
+                </div>
+                <div class = "col s1">
+                    <a class = "btn waves-effect waves-light hoverable" href="index.html"><i class ="small material-icons">arrow_back</i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+<script src="js/materialize.js"></script>
+</body>
+
+</html>

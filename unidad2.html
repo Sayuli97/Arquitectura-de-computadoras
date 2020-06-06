@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitectura de Computadoras</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalabe=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.css">
+    <title>Bienvenido</title>
+    <style>
+        body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        }
+
+        main {
+        flex: 1 0 auto;
+        }        
+        
+        .row{
+            margin-bottom: 0;
+        }
+        .title{
+            text-align: center;
+            background: #870d4c;
+            color: white;
+        }
+
+        .sidebar{
+            text-align: center;
+            background-color: #494949;
+            color: white;
+        }
+        .sidebar ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        .sidebar a{
+            margin: .1rem;  
+        }
+        .main-content h3{
+            text-align: center;
+        }
+        
+        .foot{
+            background-color: #550024;
+            color:white;
+            text-align: center;
+        }
+        .contenido h3{
+            text-align: center;
+        }
+        .contenido p{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <main> 
+        <div class = "row title">
+            <div class = "col s12">
+                <h2>Instituto Tecnologico de Saltillo</h2>
+            </div>
+        </div>
+        <div class = "row main">
+            <div class ="col s12 sidebar">
+                <div class= "section">
+                    <h3>Contenido</h3>
+                    <div class= "divider"></div>
+                    <ul>
+                        <a class="waves-effect waves-light btn" href = "http://its.mx/"><i class="material-icons left">school</i>Instituto</a>
+                            <a class="waves-effect waves-light btn" href = "unidad1.html" ><i class="material-icons left">looks_one</i>Unidad 1</a>
+                            <a class="waves-effect waves-light btn" href = "unidad2.html" ><i class="material-icons left">looks_two</i>Unidad 2</a>
+                            <a class="waves-effect waves-light btn" href = "unidad3.html" ><i class="material-icons left">looks_3</i>Unidad 3</a>
+                            <a class="waves-effect waves-light btn" href = "unidad4.html" ><i class="material-icons left">looks_4</i>Unidad 4</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class = "container">
+                
+          <div class = "row">
+                    <div class = "col s12">    
+                            <h2>Unidad 2 - Estructura y Funcionamiento del CPU</h2> 
+                            <div class ="divider"></div>
+                    </div>   
+                </div>
+                
+                <div class = "row">
+                    <div class = "col s12">    
+                            <h4><b>2.1 Organización del Procesador </b></h4> 
+                            <div class ="divider"></div>
+                    </div>   
+                </div> 
+               
+                <div class = "row contenido">
+                    <div class = "col s12">
+                        <div class = "divider"></div>
+                        <p> <p>Un procesador, incluye tanto registros visibles por el usuario como registros de control/estado. 
+      <br>Los registros visibles por el usuario pueden ser de uso general o tener una utilidad especial, mientras que los registros de control y estado se usan para controlar el funcionamiento del procesador, un claro ejemplo es el contador de programa
+	  <br>Los procesadores utilizan la segmentación de instrucciones para acelerar la ejecución. La segmentación de cauce se puede dividir en ciclo de instrucción en varias etapas separadas que operan secuencialmente:<br>
+<br><b>Captar instrucciones: </b>
+<br>El procesador lee una instrucción de memoria (registro, cache o memoria principal).
+<br><b>Interpretar instrucción: </b>
+<br>La instrucción se codifica para determinar qué acción es necesario.
+<br><b>Captar datos: </b>
+<br>La ejecución de una instrucción puede exigir leer datos de memoria o de un módulo de  E/S.
+<br><b>Procesar datos: </b>
+<br>La ejecución e una instrucción puede exigir llevar a cabo alguna operación aritmética o lógica con los datos.
+<br><b>Escribir datos: </b>
+<br>Los resultados de una ejecución pueden exigir escribir datos en la memoria o en el módulo de E/S.
+<br><br>Para hacer estas cosas, el procesador necesita almacenar instrucciones y datos temporalmente mientras una instrucción esta ejecutándose, en otras palabras el procesador necesita una pequeña memoria interna
+	  </p>
+      <h5>El procesador y el bus del sistema</h5>
+      <p>La conexión del procesador con el resto del sistema a través del bus del sistema.
+<br>• La ALU lleva a cabo el verdadero cálculo o procesamiento de datos. 
+<br>• La unidad de control controla la transferencia de datos e instrucciones así a dentro y así afuera del procesador, y el funcionamiento de la ALU.
+<br>• Consta con una memoria interna mínima, con un conjunto de posiciones de almacenamiento llamadas registros.</p>
+                    </div>
+                </div>
+ 
+                 <div class = "row">
+                    <div class = "col s12 center-align">
+                        <img class = "responsive-img "src="img/procesador.jpg" alt="Procesamiento Paralelo" width="180" height="180">
+                    </div>
+                </div>
+
+               <div class = "row contenido">
+                    <div class = "col s12">
+                        <h5><b>2.2 Estructuras de Registros </b></h5>
+                        <div class = "divider"></div>
+	  <p>Un registro es una memoria que esta ubicada en el procesador y se encuentra en el nivel más alto en la jerarquía de memoria, por lo tanto tiene una alta velocidad pero con poca capacidad para almacenar datos que va desde los 4 bits hasta los 64 bits dependiendo del procesador que se utilice. Los datos  que almacena son los que se usan frecuentemente.
+<br>También hay tipos de registros y se dividen en dos categorías.
+	  </p>
+                        <h6><b>2.2.1. Registros Visibles para el Usuario</b></h6>
+                       
+	                    <p>Son aquellos que pueden ser referenciado por medio del lenguaje maquina que ejecuta la CPU, los registro que normalmente disponibles son:
+<br><b>Registros de propósito general </b>
+<br>son aquellos que pueden guardar tanto datos como direcciones
+<br><b>Registro de datos</b>
+<br>Pueden ser asignados por el programador a diversas funciones. En algunos casos son de propósito general y pueden ser empleados por cualquier instrucción de máquina que lleve a cabo operaciones sobre los datos.
+<br><b>Registros de direcciones</b>
+<br>Contienen direcciones en la memoria principal de datos y este tipo de registro puede ser de propósito general o estar a un modo específico de direccionamiento.
+<br><b>Códigos de condición</b>
+<br>También conocidos como indicadores o flags. Los códigos de  condición, son bits activados por el procesador como resultado de determinadas operaciones
+</p>
+        <h6><b>2.2.2. Registros de Control</b></h6>
+	  <p>Se utilizan para controlar las operaciones del procesador, la mayor parte de estos registros no son visibles al usuario y algunos pueden ser accesibles a las instrucciones de maquina ejecutadas en un modo de control. Los registros utilizados son los siguientes:
+<br><b>Registro de direcciones de memoria (MAR) </b>
+<br>Contiene la dirección en donde se efectuará la próxima lectura o escritura de datos. El numero de direcciones depende del tamaño de la MAR.
+<br><b>Registro de datos de memoria (MBR)</b>
+<br>Contiene los datos que van a ser escritos en la memoria o los que fueron leídos en ella.
+<br><b>Registro de direcciones de entrada y salida (I/O AR)</b>
+<br>Especifica al dispositivo ya sea de entrada o salida
+<br><b>Registro de datos de entrada y salida (I/O BR)</b>
+<br>Es una área temporal en donde se lleva a cabo el intercambio de datos entre el procesador y el dispositivo de entrada y salida que esta especificado en IOAR.
+</p>
+                    </div>
+                </div>
+
+<div class = "row contenido">
+                    <div class = "col s12">
+                        <h5><b>2.3.Ciclos de la Instrucción </b></h5>
+                        <div class = "divider"></div>
+	  <p>  <p>Es el período que tarda la unidad central de proceso (CPU) en ejecutar una instrucción de lenguaje máquina. Comprende una secuencia de acciones determinada que debe llevar a cabo la CPU para ejecutar cada instrucción en un programa.
+<br>Cada instrucción de el juego de instrucciones de una CPU puede requerir diferente número de ciclos de instrucción para su ejecución.
+	  </p>
+
+          <div class = "row">
+                    <div class = "col s12 center-align">
+                        <img class = "responsive-img "src="img/registros.jpg" width="350" height="350" >
+                    </div>
+                </div>
+
+	  <h6><b>2.3.1 Ciclo Fetch-Decode-Execute</b></h6>
+      <p><b>Fase de Obtención donde:</b>
+<br>El registro Contador del Programa (PC) tiene la dirección de la siguiente instrucción que va obtener.
+<br>El procesador obtiene la siguiente instrucción de la localidad de memoria apuntada por el PC.
+<br>El PC se incrementa:</b>
+<br>A menos que se le indique otra cosa
+<br>El PC queda apuntando a la siguiente instrucción
+<br>La instrucción se carga en el Registro Instrucción (IR).
+<br>El procesador interpreta la instrucción y realiza las acciones  indicadas por ella.
+</b>
+</p>
+<p><b>Fase de Ejecución donde:</b>
+<br>Procesador-memoria
+<br>Transferencia de datos entre CPU y memoria principal
+<br>Procesador – E/S
+<br>Transferencia de datos entre CPU y un módulo de E/S
+<br>Procesamiento de datos
+<br>Alguna operación aritmética o lógica sobre los datos
+<br>Control
+<br>Alteración de la secuencia de operaciones
+<br>Una combinación de las anteriores
+</p>
+<p><b>Ciclo instrucción más detallado: </b>
+<br>Obtener la instrucción de la memoria de programa
+<br>Determinar el tamaño de la instrucción y las acciones ejecutar
+<br>Localizar y obtener los operandos  (datos)
+<br>Procesar los datos y calcular el valor del resultado y el estado de la máquina
+<br>Escribir los resultados en memoria para un uso posterior
+<br>Determinar la instrucción que sigue
+</p>
+
+                    <div class = "row">
+                    <div class = "col s12 center-align">
+                        <img class = "responsive-img "src="img/cicloe.png" alt="Procesamiento Paralelo">
+                    </div>
+                </div>
+
+<h6><b>2.3.2 SEGMENTACION</b></h6>
+      <p>Es la técnica de solapamiento de instrucciones.mediante la división de su ejecución en etapas o segmentos.
+<br>Los segmentos están conectados entre sí cada uno al siguiente.
+<br>Todos los segmentos proceden y progresan a la vez.
+<br>La segmentación es transparente al programador. 
+</p>
+<h6><b>2.3.3 Conjunto de Instrucciones</b></h6>
+      <p>Un conjunto de instrucciones o ISA ( Arquitectura del Conjunto de Instrucciones) es una especificación que detalla las instrucciones que una CPU de un ordenador puede entender y ejecutar.
+<br>El término describe los aspectos del procesador generalmente visibles a un programador, incluyendo los tipos de datos nativos, las instrucciones, los registros, la arquitectura de memoria y las interrupciones, entre otros aspectos.
+     </p>
+     <h6><b>Funciones</b></h6>
+      <p><b>Transferencia de datos</b>
+	  <br>Copian datos de un origen a un destino, sin modificar el origen y normalmente sin afectar a los flags o indicadores de condición. Pueden transferir palabras, fracciones de palabras (bytes, media palabra) o bloques completos de n bytes o palabras.
+<br><b>Instrucciones artiméticas</b>
+<br>Son efectuadas por la ALU y suelen cambiar los flags o indicadores de condición.
+<br>Instrucciones de comparación
+<br>Suelen preceder a una instrucción de bifurcación condicional y modifican los flags. 
+<br>Intrucciones lógicas</b>
+<br>Realizan operaciones booleanas "bit a bit" entre dos operandos. Como las aritméticas también modifican los flags.
+<br>Instrucciones de control 
+<br>Permiten modificar la secuencia normal de ejecución de un programa, puede hacerse por salto condicional relativo o absoluto.
+	  </p>
+	  <h6><b>2.3.4. Modos de Direccionamiento</b></h6>
+      <p>USe les llama modos de direccionamiento a las distintas formas de combinar los operandos según el acceso que se hace a memoria.
+<br>Dicho de otra manera, un modo de direccionamiento será una forma de parámetro para las instrucciones.
+<br>Una instrucción que lleve un parámetro, por lo tanto, usará un modo de direccionamiento, que dependerá de cómo direccionará (accesara) al parámetro; una instrucción de dos parámetros, combinará dos modos de direccionamiento.
+     </p>
+<h6><b>Formatos</b></h6>
+      <p><b>Direccionamiento implícito</b>
+	  <br>Depende solamente de la instrucción, es decir, la instrucción no lleva parámetros..Particularmente en instrucciones que no accedan memoria, o bien que tienen una forma específica de accesarla.
+<br><b>Modo registro</b>
+<br>Usa solamente registros como operandos. Es el más rápido, pues minimiza los recursos necesarios.
+<br><b>Modo inmediato</b>
+<br>Tiene dos operandos: un registro y una constante que se usa por su valor. El valor constante no se tiene que buscar en memoria, pues ya se obtuvo al hacer el “fetch” de la instrucción.
+<br><b>Modo directo</b>
+<br>Uno de los operandos involucra una localidad específica de memoria
+El valor constante se tiene que buscar en memoria, en la localidad especificada.
+<br><b>Modo indirecto</b>
+<br>Se usan los registros SI, DI como apuntadores
+El operando indica una localidad de memoria, cuya dirección (sólo la parte desplazamiento) está en SI o DI.
+Es más lento que los anteriores, pues tiene que “calcular” la localidad.
+	  </p>
+  </div>
+</main>
+
+    <div class = "page-footer foot">
+        <div class ="container">
+            <div class = "row valign-wrapper">
+                <div class = "col s11">
+                    <h4>Diseño: Cinthia Yulisa Gallegos Carranza</h4>
+                </div>
+                <div class = "col s1">
+                    <a class = "btn waves-effect waves-light hoverable" href="index.html"><i class ="small material-icons">arrow_back</i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+<script src="js/materialize.js"></script>
+</body>
+
+</html>
